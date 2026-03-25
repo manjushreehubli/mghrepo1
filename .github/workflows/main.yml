@@ -10,6 +10,10 @@ on:
         type: choice
         options:
           - dev
+      schema_name:
+        description: "Schema name"
+        required: true
+        type: string
 jobs:
   bootstrap:
     runs-on: ubuntu-latest
