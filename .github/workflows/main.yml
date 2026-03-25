@@ -3,7 +3,7 @@ name: Database Bootstrap
 on:
   workflow_dispatch:
     inputs:
-      environment:
+      env:
         description: 'Environment to deploy'
         required: true
         default: 'dev'
@@ -12,8 +12,12 @@ on:
           - dev
       schema_name:
         description: "Schema name"
-        required: true
+        required: false
         type: string
+      sql_directory:
+        description: "Schema name"
+        required: false
+        type: string  
 jobs:
   bootstrap:
     runs-on: ubuntu-latest
